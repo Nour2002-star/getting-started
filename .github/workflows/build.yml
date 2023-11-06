@@ -8,8 +8,12 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - run: ls
+            - uses: docker/login-action@v3
+              with:
+                username: ${{ secrets.DOCKERHUB_USERNAME }}
+                password: ${{ secrets.DOCKERHUB_TOKEN }}
             - uses: docker/build-push-action@v5
               with:
                 push: true
-                tags: mon0ur/gettin-started:latest
+                tags: mon0ur/getting-started:latest
              
