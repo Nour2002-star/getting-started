@@ -10,5 +10,5 @@ jobs:
             - run: ls
             - uses: docker/build-push-action@v5
               with:
-                tags: gettin-started:latest
+                tags: mon0ur/gettin-started:latest
              
